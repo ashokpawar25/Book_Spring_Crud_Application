@@ -1,0 +1,228 @@
+{
+	"info": {
+		"_postman_id": "5f901e25-5273-4479-a498-50d934009d8f",
+		"name": "BooksCrudOperations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30170908"
+	},
+	"item": [
+		{
+			"name": "get all books",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhc2hva3Bhd2FyODAyMEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1NDM5YjQ1LWIxZTUtNGQxZC05YjhhLTYyNTNkZmI1NDc2NSIsIlZlcmlmaWNhdGlvbiI6IlRydWUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcwOTg5NDU2OCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE0Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTQ2LyJ9.NwqJXAvXAg410vUgcu12bRJdDObQJz5AsXbFGbRshsY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzYW1wbGVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVhZGVyIiwiZXhwIjoxNzA2NjM4MDE0LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDM5LyJ9.b8_7LarXFLRJnM-fUMIoejd60q1SUqvI2Xuk89mdBqw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Java programming\",\r\n    \"author\": \"James Ghosling\",\r\n    \"publication\": \"Oracle Press\",\r\n    \"price\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book?name=Clean Code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Clean Code"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create new book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhc2hva3Bhd2FyODAyMEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1NDM5YjQ1LWIxZTUtNGQxZC05YjhhLTYyNTNkZmI1NDc2NSIsIlZlcmlmaWNhdGlvbiI6IlRydWUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcwOTg5NDU2OCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE0Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTQ2LyJ9.NwqJXAvXAg410vUgcu12bRJdDObQJz5AsXbFGbRshsY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzYW1wbGVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVhZGVyIiwiZXhwIjoxNzA2NjM4MDE0LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDM5LyJ9.b8_7LarXFLRJnM-fUMIoejd60q1SUqvI2Xuk89mdBqw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Java Programming\",\r\n    \"author\": \"James Ghosling\",\r\n    \"publication\": \"Oracle Press\",\r\n    \"price\": 600\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhc2hva3Bhd2FyODAyMEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1NDM5YjQ1LWIxZTUtNGQxZC05YjhhLTYyNTNkZmI1NDc2NSIsIlZlcmlmaWNhdGlvbiI6IlRydWUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcwOTg5NDU2OCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE0Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTQ2LyJ9.NwqJXAvXAg410vUgcu12bRJdDObQJz5AsXbFGbRshsY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzYW1wbGVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVhZGVyIiwiZXhwIjoxNzA2NjM4MDE0LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDM5LyJ9.b8_7LarXFLRJnM-fUMIoejd60q1SUqvI2Xuk89mdBqw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Clean Code\",\r\n    \"author\": \"Uncle bob\",\r\n    \"publication\": \"Updated publication\",\r\n    \"price\": 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book/Clean Code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"Clean Code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete book",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJhc2hva3Bhd2FyODAyMEBnbWFpbC5jb20iLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjE1NDM5YjQ1LWIxZTUtNGQxZC05YjhhLTYyNTNkZmI1NDc2NSIsIlZlcmlmaWNhdGlvbiI6IlRydWUiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsImV4cCI6MTcwOTg5NDU2OCwiaXNzIjoiaHR0cHM6Ly9sb2NhbGhvc3Q6NzE0Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo3MTQ2LyJ9.NwqJXAvXAg410vUgcu12bRJdDObQJz5AsXbFGbRshsY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9lbWFpbGFkZHJlc3MiOiJzYW1wbGVAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiUmVhZGVyIiwiZXhwIjoxNzA2NjM4MDE0LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo3MDM5LyJ9.b8_7LarXFLRJnM-fUMIoejd60q1SUqvI2Xuk89mdBqw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Java programming\",\r\n    \"author\": \"James Ghosling\",\r\n    \"publication\": \"Oracle Press\",\r\n    \"price\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book/Clean Code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book",
+						"Clean Code"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get book by name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/book?name=Clean Code",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"book"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Clean Code"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
